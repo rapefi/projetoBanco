@@ -1,5 +1,6 @@
 package teste.user;
 
+import teste.conta.ContaCorrente;
 import teste.enums.ClassificacaoEnum;
 import teste.enums.StatusEnum;
 
@@ -7,6 +8,7 @@ import java.time.LocalDate;
 
 public class Usuario {
     private String id;
+
     private ClassificacaoEnum classificacao;
     private String nome;
 
@@ -15,11 +17,15 @@ public class Usuario {
     private StatusEnum status;
 
 
-    public Usuario(String id) {
-        this.id = id;
-    }
 
-    public Usuario() {
+
+    public Usuario(String id, ClassificacaoEnum classificacao, String nome, LocalDate dataCadastro, StatusEnum status) {
+        this.id = id;
+        this.classificacao = classificacao;
+        this.nome = nome;
+        this.dataCadastro = dataCadastro;
+        this.status = status;
+
     }
 
     public String getId() {
@@ -61,4 +67,6 @@ public class Usuario {
     public void setStatus(StatusEnum status) {
         this.status = status;
     }
+
+
 }

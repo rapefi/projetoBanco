@@ -1,6 +1,7 @@
 package teste.conta;
 
 import teste.enums.StatusEnum;
+import teste.user.Usuario;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -15,7 +16,7 @@ public class Conta {
 
     private StatusEnum status;
 
-    private String idUsuario;
+    private Usuario usuario;
 
     private List<ContaRegistroAcoes> listaRegistroOperecoes;
 
@@ -23,14 +24,14 @@ public class Conta {
     public Conta() {
     }
 
-    public Conta(Long id, BigDecimal saldo, LocalDate dataAtualizacao, StatusEnum status, String idUsuario) {
+    public Conta(Long id, BigDecimal saldo, LocalDate dataAtualizacao, StatusEnum status, Usuario usuario) {
         this.id = id;
         this.saldo = saldo;
         this.dataAtualizacao = dataAtualizacao;
         this.status = status;
-        this.idUsuario = idUsuario;
-    }
+        this.usuario = usuario;
 
+    }
 
     public Long getId() {
         return id;
@@ -64,12 +65,12 @@ public class Conta {
         this.status = status;
     }
 
-    public String getIdUsuario() {
-        return idUsuario;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setIdUsuario(String idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public List<ContaRegistroAcoes> getListaRegistroOperecoes() {
@@ -87,9 +88,8 @@ public class Conta {
                 ", saldo=" + saldo +
                 ", dataAtualizacao=" + dataAtualizacao +
                 ", status=" + status +
-                ", idUsuario='" + idUsuario + '\'' +
+                ", usuario=" + usuario +
+                ", listaRegistroOperecoes=" + listaRegistroOperecoes +
                 '}';
     }
-
-
 }

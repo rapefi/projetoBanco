@@ -1,17 +1,18 @@
 package teste.conta;
 
+import teste.enums.TipoTransacaoEnum;
 import teste.user.Usuario;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class ContaRegistroAcoes {
 
-    private LocalDate data;
-    private String tipoTransacao;
+    private LocalDateTime data;
+    private TipoTransacaoEnum tipoTransacao;
 
     private BigDecimal valorPretendido;
-    private BigDecimal valoreReal;
+    private BigDecimal valorReal;
 
     private Usuario usuarioOrigem;
 
@@ -25,26 +26,26 @@ public class ContaRegistroAcoes {
                 "data=" + data +
                 ", tipoTransacao='" + tipoTransacao + '\'' +
                 ", valorPretendido=" + valorPretendido +
-                ", valoreReal=" + valoreReal +
+                ", valorReal=" + valorReal +
                 ", usuarioOrigem=" + usuarioOrigem +
                 ", usuarioDestino=" + usuarioDestino +
                 ", observacoes='" + observacoes + '\'' +
                 '}';
     }
 
-    public LocalDate getData() {
+    public LocalDateTime getData() {
         return data;
     }
 
-    public void setData(LocalDate data) {
+    public void setData(LocalDateTime data) {
         this.data = data;
     }
 
-    public String getTipoTransacao() {
+    public TipoTransacaoEnum getTipoTransacao() {
         return tipoTransacao;
     }
 
-    public void setTipoTransacao(String tipoTransacao) {
+    public void setTipoTransacao(TipoTransacaoEnum tipoTransacao) {
         this.tipoTransacao = tipoTransacao;
     }
 
@@ -56,12 +57,12 @@ public class ContaRegistroAcoes {
         this.valorPretendido = valorPretendido;
     }
 
-    public BigDecimal getValoreReal() {
-        return valoreReal;
+    public BigDecimal getValorReal() {
+        return valorReal;
     }
 
-    public void setValoreReal(BigDecimal valoreReal) {
-        this.valoreReal = valoreReal;
+    public void setValorReal(BigDecimal valorReal) {
+        this.valorReal = valorReal;
     }
 
     public Usuario getUsuarioOrigem() {
@@ -88,19 +89,7 @@ public class ContaRegistroAcoes {
         this.observacoes = observacoes;
     }
 
-    public ContaRegistroAcoes(LocalDate data, String tipoTransacao, BigDecimal valorPretendido, BigDecimal valoreReal, Usuario usuarioOrigem, Usuario usuarioDestino, String observacoes) {
-        this.data = data;
-        this.tipoTransacao = tipoTransacao;
-        this.valorPretendido = valorPretendido;
-        this.valoreReal = valoreReal;
-        this.usuarioOrigem = usuarioOrigem;
-        this.usuarioDestino = usuarioDestino;
-        this.observacoes = observacoes;
+
+    public ContaRegistroAcoes() {
     }
-
-    public ContaRegistroAcoes(LocalDate data) {
-        this.data = data;
-    }
-
-
 }
