@@ -28,6 +28,9 @@ public class Usuario {
 
     }
 
+    public Usuario() {
+    }
+
     public String getId() {
         return id;
     }
@@ -68,5 +71,14 @@ public class Usuario {
         this.status = status;
     }
 
-
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id='" + id + '\'' +
+                ", classificacao=" + classificacao +
+                ", nome='" + nome + '\'' +
+                ", dataCadastro=" + dataCadastro +
+                ", status=" + status +
+                '}';
+    }
 }
